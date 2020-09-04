@@ -2,17 +2,18 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
 <body>
 <div class="wrapper fadeInDown">
     <div id="formContent">
         <div class="fadeIn first">
-            <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon"/>
+            <h3 class="mt-2">Resume Web App</h3>
         </div>
-        <form>
+        <form action="login" method="POST">
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
             <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
     </div>
