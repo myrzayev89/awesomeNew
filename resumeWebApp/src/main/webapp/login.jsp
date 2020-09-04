@@ -15,9 +15,6 @@
             <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
             <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
-        <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
-        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
