@@ -13,7 +13,7 @@
         </div>
         <form action="login" method="POST">
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
             <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
     </div>
