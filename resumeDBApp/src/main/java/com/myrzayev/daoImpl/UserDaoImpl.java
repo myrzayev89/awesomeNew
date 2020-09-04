@@ -91,6 +91,24 @@ public class UserDaoImpl extends AbstractDao implements UserDaoInter {
     }
 
     @Override
+    public User findByEmailAndPassword(String email, String password) {
+        User result = null;
+        try(Connection c = connect()) {
+            PreparedStatement stmt = c.prepareStatement("select * from user where email=? and paassword=?");
+            stmt.setString(1,email);
+            stmt.setString(2,password);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                result = getUser(rs);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+
+        }
+        return result;
+    }
+
+    @Override
     public boolean updateUser(User u) {
         try (Connection c = connect()) {
             PreparedStatement stmt = c.prepareStatement("update user set name=?, surname=?, phone=?, email=?, profile_desc=?, address=?, birthdate=? where id=?");
