@@ -81,7 +81,7 @@
                     </td>
                     <td style="width: 3px;">
                         <button type="submit" data-toggle="modal" data-target="#modalDelete"
-                                class="btn btn-outline-danger" onclick="idForDel(<%=u.getId()%>)">
+                                class="getId btn btn-outline-danger" data-id="<%=u.getId()%>">
                             <i class="fas fa-trash-alt"></i>
                         </button>
                     </td>
@@ -108,7 +108,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <form action="userdetail" method="POST">
-                    <input type="hidden" name="id" value="" id="idForDel">
+                    <input type="hidden" name="id" value="" class="setId">
                     <input type="hidden" name="action" value="delete">
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
@@ -116,15 +116,21 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/6f929fe1c1.js"></script>
 <script>
-    function idForDel(id) {
-        var elem = document.getElementById("idForDel");
-        elem.value = id;
-    }
+    $(document).ready(function (){
+        $(".getId").on("click", function () {
+            var id = $(this).data("id");
+            $("#modalDelete").find(".setId").val(id);
+        });
+    });
+    // function idForDel(id) {
+    //     var elem = document.getElementById("idForDel");
+    //     elem.value = id;
+    // }
 </script>
 </body>
 </html>
