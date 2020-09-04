@@ -20,16 +20,16 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Adi" name="name">
+                            <input type="text" class="form-control" placeholder="Name" name="name">
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Soyadi" name="surname">
+                            <input type="text" class="form-control" placeholder="Surname" name="surname">
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <button type="submit" class="btn btn-outline-primary">Axtar...</button>
+                        <button type="submit" class="btn btn-outline-primary">Search</button>
                     </div>
                 </div>
             </form>
@@ -39,12 +39,12 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Adi" name="name">
+                            <input type="text" class="form-control" placeholder="Name" name="name">
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Soyadi" name="surname">
+                            <input type="text" class="form-control" placeholder="Surname" name="surname">
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -57,9 +57,9 @@
             <table class="table table-hover">
                 <thead>
                 <tr>
-                    <th>Adi</th>
-                    <th>Soyadi</th>
-                    <th>Milleti</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Nationality</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -103,7 +103,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Silmek istediyinizden eminsinizmi ?</p>
+                <p>Are you sure ?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -127,10 +127,6 @@
             $("#modalDelete").find(".setId").val(id);
         });
     });
-    // function idForDel(id) {
-    //     var elem = document.getElementById("idForDel");
-    //     elem.value = id;
-    // }
 </script>
 </body>
 </html>
