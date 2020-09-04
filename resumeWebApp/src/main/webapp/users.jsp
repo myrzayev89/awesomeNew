@@ -80,13 +80,10 @@
                         </form>
                     </td>
                     <td style="width: 3px;">
-                        <form action="userdetail" method="POST">
-                            <input type="hidden" name="id" value="<%=u.getId()%>">
-                            <input type="hidden" name="action" value="delete">
-                            <button type="submit" class="btn btn-outline-danger">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </form>
+                        <button type="submit" data-toggle="modal" data-target="#modalDelete"
+                                class="btn btn-outline-danger" onclick="idForDel(<%=u.getId()%>)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </td>
                 </tr>
                 <% } %>
@@ -95,11 +92,39 @@
         </div>
     </div>
 </div>
-
-
+<!-- Modal -->
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Silmek istediyinizden eminsinizmi ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <form action="userdetail" method="POST">
+                    <input type="hidden" name="id" value="" id="idForDel">
+                    <input type="hidden" name="action" value="delete">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/6f929fe1c1.js"></script>
+<script>
+    function idForDel(id) {
+        var elem = document.getElementById("idForDel");
+        elem.value = id;
+    }
+</script>
 </body>
 </html>
