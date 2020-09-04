@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "UsersController", urlPatterns = {"/users"})
+@WebServlet(name = "UsersController", urlPatterns = {"/index"})
 public class UsersController extends HttpServlet {
 
     @Override
@@ -28,7 +28,7 @@ public class UsersController extends HttpServlet {
             }
             List<User> list = userDao.getAll(name, surname, nationalityId);
             req.setAttribute("usersList", list);
-            req.getRequestDispatcher("users.jsp").forward(req, resp);
+            req.getRequestDispatcher("index.jsp").forward(req, resp);
         } catch (Exception ex) {
             ex.printStackTrace();
             resp.sendRedirect("error?msg=" + ex.getMessage());
@@ -43,6 +43,6 @@ public class UsersController extends HttpServlet {
         String surname = req.getParameter("surname");
         User u = new User(0,name,surname,null,null,null,null,null,null,null);
         userDao.addUser(u);
-        resp.sendRedirect("users");
+        resp.sendRedirect("index");
     }
 }
