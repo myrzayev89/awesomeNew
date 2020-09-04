@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Niye sen burdasan ?</title>
+    <title>Why you here ?</title>
 </head>
 <body>
     <div class="container">
