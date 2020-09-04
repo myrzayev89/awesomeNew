@@ -3,6 +3,7 @@ package com.myrzayev.resume.controller;
 import com.myrzayev.daoInter.UserDaoInter;
 import com.myrzayev.entity.User;
 import com.myrzayev.main.Context;
+import com.myrzayev.resume.util.ControllerUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,8 +32,7 @@ public class UserDetailController extends HttpServlet {
             req.setAttribute("user", user);
             req.getRequestDispatcher("userdetail.jsp").forward(req, resp);
         } catch (Exception ex) {
-            ex.printStackTrace();
-            resp.sendRedirect("error?msg=" + ex.getMessage());
+            ControllerUtil.errorPage(resp,ex);
         }
     }
 
