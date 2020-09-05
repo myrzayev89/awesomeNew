@@ -109,7 +109,7 @@ public class UserDaoImpl extends AbstractDao implements UserDaoInter {
     public User findByEmailAndPassword(String email, String password) {
         User result = null;
         try(Connection c = connect()) {
-            PreparedStatement stmt = c.prepareStatement("select * from user where email=? and paassword=?");
+            PreparedStatement stmt = c.prepareStatement("select * from user where email=? and password=?");
             stmt.setString(1,email);
             stmt.setString(2,password);
             ResultSet rs = stmt.executeQuery();
@@ -118,7 +118,6 @@ public class UserDaoImpl extends AbstractDao implements UserDaoInter {
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return result;
     }

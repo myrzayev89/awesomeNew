@@ -12,8 +12,8 @@
             <h3 class="mt-2">Resume Web App</h3>
         </div>
         <form action="login" method="POST">
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="text" id="login" class="fadeIn second" name="email" placeholder="login">
+            <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
             <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
     </div>
