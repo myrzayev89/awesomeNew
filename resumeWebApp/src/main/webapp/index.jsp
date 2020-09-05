@@ -39,12 +39,12 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Name" name="name">
+                            <input type="text" name="name" class="form-control" placeholder="Name">
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Surname" name="surname">
+                            <input type="text" name="surname" class="form-control" placeholder="Surname">
                         </div>
                     </div>
                     <div class="col-lg-4">
