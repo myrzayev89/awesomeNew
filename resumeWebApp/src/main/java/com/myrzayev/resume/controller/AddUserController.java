@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "IndexController", urlPatterns = {"/index"})
-public class IndexController extends HttpServlet {
+@WebServlet(name = "AddUserController", urlPatterns = {"/adduser"})
+public class AddUserController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

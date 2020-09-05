@@ -16,7 +16,7 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-lg-6">
-            <form action="index" method="GET">
+            <form action="adduser" method="GET">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="form-group">
@@ -35,7 +35,7 @@
             </form>
         </div>
         <div class="col-lg-6">
-            <form action="index" method="POST">
+            <form action="adduser" method="POST">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="form-group">
