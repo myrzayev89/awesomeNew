@@ -2,7 +2,7 @@
 <%@ page import="com.myrzayev.main.Context" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.myrzayev.entity.User" %>
-<%@ page import="com.myrzayev.resume.controller.UserDetailController" %>
+<%@ page import="src.main.java.resume.controller.UserDetailController" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
